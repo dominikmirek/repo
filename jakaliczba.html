@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2>Pomyślałam sobie o liczbie od 0 do 100.</h2>
+<h3>O jakiej liczbie pomyślałam?</h3>
+
+<p>
+  <i>Podaj pierwszą liczbę:</i>
+  <input type="number" id="i1"/></p>
+
+<button onclick="f()">Sprawdź</button>
+<br>
+
+<output id="o1"></output>
+
+<script>
+  const odp=Math.floor(Math.random()*100);
+  function f() {
+    let a=1;
+    let w;
+    do {
+      let b = parseInt(i1.value);
+      if (odp == b) {
+        w = "Dobrze! Liczba o której myślałam to "+odp;
+        break;
+      } else if (odp < b) {
+        w = "Za duża liczba!";
+      } else w = "Za mała liczba!";
+    } while (a == 0)
+
+    o1.value=w
+
+  }
+  console.log(odp)
+
+</script>
+
+</body>
+</html>
